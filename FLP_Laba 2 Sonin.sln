@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32407.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FLP_Laba 2 Sonin", "FLP_Laba 2 Sonin\FLP_Laba 2 Sonin.csproj", "{7EF8EBCE-07CB-415C-A820-F9FDFA8BD44E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7EF8EBCE-07CB-415C-A820-F9FDFA8BD44E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EF8EBCE-07CB-415C-A820-F9FDFA8BD44E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EF8EBCE-07CB-415C-A820-F9FDFA8BD44E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EF8EBCE-07CB-415C-A820-F9FDFA8BD44E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {11776A8A-67EF-4800-9DC2-F70DB33BFBD6}
+	EndGlobalSection
+EndGlobal
