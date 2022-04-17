@@ -30,7 +30,7 @@ namespace FLP_Laba_2_Sonin
 
         }
 
-        private List<DB_reply> DB_request(string sqlExpression)
+        private List<DB_reply> DB_request(string sqlExpression) // Запрос к БД на языке SQL
         {
             List<DB_reply> result = new List<DB_reply>(); // Список со строками из БД 
             DB_reply reply = new DB_reply();
@@ -87,6 +87,20 @@ namespace FLP_Laba_2_Sonin
         }
         private void bestGroup_Click(object sender, RoutedEventArgs e)
         {
+            secondList.Visibility = Visibility.Hidden;
+            List<DB_reply> reply;
+            // Сложный запрос, получаю список групп и суммарное количество сданных предметов у всех студентов
+            string sqlExpression = @"SELECT Summary_statement.id, Students.Group_id, COUNT(Grade) FROM Summary_statement
+                                    INNER JOIN Students
+                                    ON Students.id = Student
+                                    WHERE Summary_statement.Grade >= 25
+                                    GROUP BY Students.Group_id
+                                    ORDER BY COUNT(Grade) DESC";
+            reply = DB_request(sqlExpression);
+            // Ищу название группы по ключу id
+            sqlExpression = "SELECT Groups.id, Group_number FROM Groups WHERE Groups.id = '" + reply[0].One + "'";
+            reply = DB_request(sqlExpression);
+            MessageBox.Show("Лучшая группа: " + reply[0].One);
 
         }
         private void Tuneyadsi_Click(object sender, RoutedEventArgs e) // Список должников
