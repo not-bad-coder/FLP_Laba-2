@@ -6,7 +6,26 @@
         xmlns:local="clr-namespace:FLP_Laba_2_Sonin"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Grid ShowGridLines="True">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <ListBox Grid.Column="0">
+            <TextBox Name="textBox" TextWrapping="Wrap" Width="120"/>
+            <ListBox Name="allList" SelectionChanged="allList_SelectionChanged"/>
+        </ListBox>
+        <ListBox Grid.Column="1" Name="secondList" SelectionChanged="allList_SelectionChanged">
+            
+        </ListBox>
+        <StackPanel Grid.Column="2">
+            <Button x:Name="numberOfGroups" Content="Число групп определённой специальности" Click="router_Click" Margin="0 10 0 0" Height="40"/>
+            <Button x:Name="studentGrade" Content="Оценка студента по предмету" Margin="0 10 0 0" Height="40" Click="router_Click"/>
+            <Button Content="Группа, сдавшая больше всего предметов" Margin="0 10 0 0" Height="40" Click="bestGroup_Click"/>
+            <Button Content="Найти должников" Margin="0 10 0 0" Height="40" Click="Tuneyadsi_Click"/>
+            <Button Content="Кто косит от армии" Margin="0 10 0 0" Height="40" Click="Army_Click"/>
+        </StackPanel>
     </Grid>
 </Window>
