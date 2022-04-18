@@ -69,7 +69,8 @@ namespace FLP_Laba_2_Sonin
             switch (btn.Name)
             {
                 case "numberOfGroups":
-                    sqlExpression = "SELECT DISTINCT Groups.id, Specialty_code, Facult FROM Groups";
+                    sqlExpression = @"SELECT Groups.id, Specialty_code, Facult FROM Groups
+                                    GROUP BY Specialty_code";
                     allList.ItemsSource = DB_request(sqlExpression);
                     sendMessage("Выберите код специальности");
                     currentFunction = 1;
